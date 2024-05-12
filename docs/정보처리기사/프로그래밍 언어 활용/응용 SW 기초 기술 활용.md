@@ -7,6 +7,41 @@ grand_parent: 정보처리기사
 nav_order: 5.3
 ---
 
+- [Unix](#unix)
+  - [커널(Kernel)](#커널kernel)
+  - [쉘(Shell)](#쉘shell)
+  - [Utility Program](#utility-program)
+  - [파일 디스크립터(File Descriptor)](#파일-디스크립터file-descriptor)
+- [배치 전략](#배치-전략)
+- [페이지 교체 알고리즘](#페이지-교체-알고리즘)
+  - [OPT(OPTimal ReplaceMent, 최적 교체)](#optoptimal-replacement-최적-교체)
+  - [FIFO](#fifo)
+  - [LRU(Least Recently Used)](#lruleast-recently-used)
+  - [LFU(Least Frequently Used)](#lfuleast-frequently-used)
+  - [NUR(Not Used Recently)](#nurnot-used-recently)
+- [프로세스](#프로세스)
+  - [PCB](#pcb)
+  - [프로세스 상태 전이](#프로세스-상태-전이)
+- [스레드](#스레드)
+- [HRN(Hightest Response-ratio Next)](#hrnhightest-response-ratio-next)
+- [UNIX 명령어](#unix-명령어)
+- [IPv6](#ipv6)
+  - [IPv6의 주소 체계](#ipv6의-주소-체계)
+- [OSI 참조 모델](#osi-참조-모델)
+  - [데이터 단위](#데이터-단위)
+  - [물리 계층](#물리-계층)
+  - [데이터 링크 계층](#데이터-링크-계층)
+  - [네트워크 계층](#네트워크-계층)
+  - [전송 계층](#전송-계층)
+  - [세션 계층](#세션-계층)
+  - [표현 계층](#표현-계층)
+  - [응용 계층](#응용-계층)
+- [TCP/IP](#tcpip)
+  - [응용 계층 주요 프로토콜](#응용-계층-주요-프로토콜)
+  - [전송 계층 주요 프로토콜](#전송-계층-주요-프로토콜)
+  - [인터넷 계층 주요 프로토콜](#인터넷-계층-주요-프로토콜)
+  - [네트워크 액세스 계층 주요 프로토콜](#네트워크-액세스-계층-주요-프로토콜)
+
 # Unix
 1960년대 벨 연구소, GE, MIT가 공동 개발한 운영체제
 - 시분할 시스템을 위해 설계
