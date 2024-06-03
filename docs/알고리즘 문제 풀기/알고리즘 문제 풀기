@@ -1,0 +1,115 @@
+---
+title: 약수의 합
+layout: default
+nav_order: 2
+parent: 알고리즘 문제 풀기
+has_children: false
+---
+
+# [약수의 합](https://www.acmicpc.net/problem/17427)
+두 자연수 A와 B가 있을 때, A = BC를 만족하는 자연수 C를 A의 약수라고 한다. 예를 들어, 2의 약수는 1, 2가 있고, 24의 약수는 1, 2, 3, 4, 6, 8, 12, 24가 있다. 자연수 A의 약수의 합은 A의 모든 약수를 더한 값이고, f(A)로 표현한다. x보다 작거나 같은 모든 자연수 y의 f(y)값을 더한 값은 g(x)로 표현한다.  
+
+자연수 N이 주어졌을 때, g(N)을 구해보자.
+
+# 해석
+1년 반 만에 다시 문제풀이를 시작하면서 처음 푼 문제입니다.
+
+처음에는 각 수의 약수를 구해서 모두 더하는 방식으로 해결하려 했지만, 시간초과가 발생했습니다. 이를 통해 1부터 N까지의 약수를 하나씩 구해서 더하는 방식에서는 시간초과가 발생할 수밖에 없음을 알게 되었습니다. 결국 이 문제를 해결하기 위해서는 **N log N**의 시간 복잡도를 가진 방법을 사용해야 합니다.
+
+1부터 N까지의 수들을 대상으로 약수를 매번 구해서 더하는 대신, 각 약수가 될 대상들이 1부터 N 사이에 몇 개 있는지를 구하면 **N** 안에 문제를 해결할 수 있습니다.
+
+
+- N 이하에서 K를 약수로 갖는 수의 개수는 `(N / i) * i` 입니다.
+
+## 예시 1
+1을 약수로 가지는 1부터 N 사이의 수: `N * 1`
+
+## 예시 2
+3을 약수로 가지는 1부터 N 사이의 수: `(N / 3) * 3`
+
+예를 들어, N이 10이라면 10 이하에서 3의 배수는 3개가 있습니다: 3, 6, 9  
+이 수들에서 3이 약수로 나타나므로 3 * 3 = 9입니다.
+
+
+
+# 추가로 사용한 예제
+```
+N : 1000000 -> Answer : 2129364901
+```
+
+### 시간초과 답안 - 1
+```
+#include <iostream>
+
+using namespace std;
+
+int a, b, N;
+
+
+int get_measure_sum(int num) {
+
+	int sum = 0;
+	for (int i = 1; i*i <= num && i<=num/2; i++) {
+		// i 가 num의 약수가 아닌 경우
+		if (num % i != 0)
+			continue;
+
+
+		sum += i;
+
+		// i*i = num 인 경우
+		if(num / i != i)
+			sum += num/i;
+	}
+
+	return sum;
+}
+
+
+int main() {
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+
+	cin >> N;
+
+	int sum = 1;
+	
+	for (int i = N; i >= 2; i--) {
+		sum += get_measure_sum(i);
+	}
+
+
+	cout << sum << endl;
+
+	return 0;
+}
+
+```
+
+### 답안
+```
+#include <iostream>
+using namespace std;
+
+int N;
+
+
+int main() {
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+
+	cin >> N;
+
+	long long sum = 0;
+
+	for (int i = 1; i <= N; i++) {
+		sum += (N / i) * i;
+	}
+
+	cout << sum << "\n";
+
+	return 0;
+}
+```
