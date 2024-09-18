@@ -6,7 +6,7 @@ parent: 자바
 has_children: false
 ---
 
-C언어 - free()
+C언어 - free()  
 Java - 사용하지 않는 메모리를 자동으로 회수하는 시스템인 Garbage Collection 사용
 
 # GC의 동작 원리
@@ -22,7 +22,7 @@ Java - 사용하지 않는 메모리를 자동으로 회수하는 시스템인 G
 - **Sweep 단계** : 표시되지 않은 객체들은 전부 사용할 수 없다고 간주해 메모리에서 해제.
 
 # GC 영역
-![GC 영역](java_images/gc_area.png)
+![GC 영역](./java_images/gc_area.png)
 Generational Hypothesis(세대 가설)을 기반으로 설계되었다.
 - 대부분의 객체는 금방 접근불가능한(Unreachable) 상태가 된다.
 - 오래된 객체에서 새로운 객체로의 참조는 아주 적게 존재한다.
@@ -44,8 +44,8 @@ Generational Hypothesis(세대 가설)을 기반으로 설계되었다.
 - 사용되지 않는 메모리는 해제되고 Eden 영역에 존재하는 객체는 Survivor 영역으로 옮겨짐.
 - Survivor 영역은 총 두 개(From, To)이지만 반드시 1개의 영역에만 데이터가 존재해야 함.
 
-#### Minor GC 동작 순서
-![GC 작동원리](java_images/gc_how_it_works.png)
+### Minor GC 동작 순서
+![GC 작동원리](./java_images/gc_how_it_works.png)
 1. 새로 생성된 객체가 Eden에 할당된다.
 2. 객체가 계속 생성되어 Eden 영역이 꽉 차게 되고, Minor GC가 실행된다.
    1) Eden 영역에서 사용되지 않는 객체의 메모리가 해제된다.
