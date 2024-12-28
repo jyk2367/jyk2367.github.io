@@ -8,7 +8,7 @@ has_children: false
 ---
 
 
-### [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)
+## [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)
 You are given an array prices where prices[i] is the price of a given stock on the ith day.
 
 You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
@@ -35,13 +35,13 @@ Constraints:
 1 <= prices.length <= 105
 0 <= prices[i] <= 104
 
-### 생각한 방법
+## 생각한 방법
 1. 이중for문으로 한번 풀고 접근맞는지 확인- O(N^2)라 구림
 2. 결과만 저장하는 방식으로 변경 - idx와 maxNum을 두고 처리(카데인 알고리즘 Kadane's Algorithm)
 - idx가 아니라 그냥 값을 저장하는 방식으로 바꿔도 상관없을듯.
 
 
-### 답안
+## 답안
 ```c++
 class Solution {
 public:
