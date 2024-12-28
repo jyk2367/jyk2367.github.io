@@ -172,6 +172,8 @@ plugins:
   - jekyll-include-cache
 
 kramdown:
+  input: GFM
+  hard_wrap: true
   syntax_highlighter_opts:
     block:
       line_numbers: false
