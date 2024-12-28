@@ -1,5 +1,6 @@
 ---
 title: Sum of Two Integers
+layout: default
 nav_order: 2
 parent: 알고리즘 문제 풀기
 has_children: false
