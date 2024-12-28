@@ -6,7 +6,7 @@ has_children: false
 ---
 
 
-# [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/description/)
+### [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/description/)
 Given two integers a and b, return the sum of the two integers without using the operators + and -.
 
 Example 1:
@@ -23,10 +23,10 @@ Constraints:
 
 -1000 <= a, b <= 1000
 
-# 생각한 방법
+### 생각한 방법
 `+`와 `-`를 사용하지 않고 덧셈 구현 문제
 
-# 팁
+### 팁
 [Bit 다루는 방법](https://leetcode.com/problems/sum-of-two-integers/solutions/84278/a-summary-how-to-use-bit-manipulation-to-solve-problems-easily-and-efficiently)
 Set union : A | B
     - 집합론에서의 합집합(Union)에 해당
@@ -80,7 +80,7 @@ Get all 1-bits : ~0
 보던 중 좋은 게 있어서 가져왔음. 
 AND, OR, XOR, 쉬프트연산 알아도 이런팁 기억못하면 코테풀때 생각해서 만들어 풀어야해서 시간상 불리할듯.
 
-# 문제 공부하면서 다시 확인한 내용
+### 문제 공부하면서 다시 확인한 내용
 반가산기는 “Carry-in이 없는” 1비트 덧셈 담당.
 전가산기는 “Carry-in이 있는” 1비트 덧셈 담당.
 덧셈은  **여러 자리(bit)**에 대해 반복해야 하므로 전가산기를 while문을 돌면서 처리하도록 만든 게 이번 문제 답안.
