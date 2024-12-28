@@ -49,8 +49,11 @@ LeetCode는 언어별 속도차이 지원을 안해서 앞으로 C++로만 풀�
 Approach1은 이중for문이라 거르고, 
 Approach2,3은 Map에다 넣는 족족 검사하는 방법이랑, 맵에 다 넣고 난 뒤에 검사하는 방법의 차이.
 
+답변 보니까 어차피 순차적으로 넣는 방식을 사용하고 있어서 indexMap하나만 사용해도 됨.
+map과 unordered_map의 차이로 시간복잡도가 O(N)까지 내려가게 됨.
 
-### 답안
+
+### 내 답안
 ```java
 class Solution {
 
@@ -102,6 +105,29 @@ public:
 
         // error handling
         return {0,0};
+
+    }
+};
+```
+
+# 정답
+```c++
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int,int> indexMap;
+
+        for(int i=0;i<nums.size();i++){
+            int opposite_num = target-nums[i];
+            if(indexMap.find(opposite_num) != indexMap.end()){
+                return {indexMap[opposite_num], i};
+            }
+            indexMap[nums[i]] = i;
+        }
+
+
+        // error handling
+        return {};
 
     }
 };
