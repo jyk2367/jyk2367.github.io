@@ -1,7 +1,7 @@
 ---
 title: Two Sum
 layout: default
-nav_order: 2
+nav_order: 1.3
 parent: LeetCode
 has_children: false
 ---

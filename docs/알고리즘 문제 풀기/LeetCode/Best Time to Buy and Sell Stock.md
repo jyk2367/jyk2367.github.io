@@ -1,8 +1,9 @@
 ---
 title: Best Time to Buy and Sell Stock
 layout: default
-nav_order: 2
+nav_order: 1.1
 parent: LeetCode
+grand_parent: 알고리즘 문제 풀기
 has_children: false
 ---
 

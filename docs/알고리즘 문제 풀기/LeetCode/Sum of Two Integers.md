@@ -1,8 +1,9 @@
 ---
 title: Sum of Two Integers
 layout: default
-nav_order: 2
+nav_order: 1.2
 parent: LeetCode
+grand_parent: 알고리즘 문제 풀기
 has_children: false
 ---
 
