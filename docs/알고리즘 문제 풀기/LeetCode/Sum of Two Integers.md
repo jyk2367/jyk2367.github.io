@@ -2,7 +2,7 @@
 title: Sum of Two Integers
 layout: default
 nav_order: 2
-parent: 알고리즘 문제 풀기
+parent: LeetCode
 has_children: false
 ---
 
