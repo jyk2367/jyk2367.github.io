@@ -32,7 +32,7 @@ The given node will always be the first node with val = 1. You must return the c
  
 
 Example 1:
-![Clone Graph Ex1](./Examples/Clone_Graph_Ex1.png)
+![Clone Graph Ex1](Examples/Clone_Graph_Ex1.png)
 
 Input: adjList = [[2,4],[1,3],[2,4],[1,3]]
 Output: [[2,4],[1,3],[2,4],[1,3]]
@@ -43,7 +43,7 @@ Explanation: There are 4 nodes in the graph.
 4th node (val = 4)'s neighbors are 1st node (val = 1) and 3rd node (val = 3).
 
 Example 2:
-![Clone Graph Ex2](./Examples/Clone_Graph_Ex2.png)
+![Clone Graph Ex2](Examples/Clone_Graph_Ex2.png)
 
 Input: adjList = [[]]
 Output: [[]]
